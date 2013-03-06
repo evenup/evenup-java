@@ -28,7 +28,7 @@
 # Copyright 2013 EvenUp.
 #
 class java (
-  $ensure => 'latest'
+  $ensure = 'latest'
 ){
 
   package { 'java-1.6.0-openjdk':

@@ -28,7 +28,7 @@
 # Copyright 2013 EvenUp.
 #
 class java::devel (
-  $ensure => 'latest'
+  $ensure = 'latest'
 ){
 
   package {
