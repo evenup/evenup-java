@@ -31,7 +31,7 @@ class java (
   $ensure = 'latest'
 ){
 
-  package { 'java-1.6.0-openjdk':
+  package { 'java-1.7.0-openjdk':
     ensure  => $ensure
   }
 

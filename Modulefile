@@ -1,5 +1,5 @@
 name 'evenup-java'
-version '0.0.3'
+version '0.0.4'
 author 'Justin Lambert <jlambert@letsevenup.com>'
 license 'Apache'
 summary 'Manages java.'
