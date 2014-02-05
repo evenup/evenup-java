@@ -8,6 +8,9 @@
 #   String.  Controls whether java should be installed or absent.
 #   Valid options are: present, absent, latest, installed, or a specific version
 #
+# [*devel*]
+#   Boolean.  Whether or not to include development packages
+#   Default: false
 #
 # === Examples
 #
@@ -28,11 +31,18 @@
 # Copyright 2013 EvenUp.
 #
 class java (
-  $ensure = 'latest'
+  $ensure = 'latest',
+  $devel  = false,
 ){
 
   package { 'java-1.7.0-openjdk':
     ensure  => $ensure
+  }
+
+  if $devel {
+    package { 'java-1.7.0-openjdk-devel.x86_64':
+      ensure  => $ensure,
+    }
   }
 
   file {
